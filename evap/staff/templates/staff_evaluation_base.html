@@ -12,15 +12,13 @@
     {{ block.super }}
     {% if evaluation %}
     	{% if evaluation.name %}
-            {% url 'staff:evaluation_edit' evaluation.id as eval_edit_id %}
-            {% breadcrumb_item eval_edit_id %} 
+            {% breadcrumb_item_url 'staff:evaluation_edit' evaluation.id %} 
                 {{ evaluation.name }}
-            {% endbreadcrumb_item %}
+            {% endbreadcrumb_item_url %}
     	{% else %}
-            {% url 'staff:evaluation_edit' evaluation.id as eval_edit_id %}
-            {% breadcrumb_item eval_edit_id %} 
+            {% breadcrumb_item_url 'staff:evaluation_edit' evaluation.id %} 
                 {{ evaluation.course.name }}
-            {% endbreadcrumb_item %}
+            {% endbreadcrumb_item_url %}
     	{% endif %}
     {% endif %}
 {% endblock %}

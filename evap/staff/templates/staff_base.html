@@ -12,10 +12,9 @@
                         {% translate 'Manage' %}
                     {% endbreadcrumb_item %}
                 {% else %}
-                    {% url 'staff:index' as staff_index_url %}
-                    {% breadcrumb_item staff_index_url %} 
+                    {% breadcrumb_item_url 'staff:index' %} 
                         {% translate 'Manage' %}
-                    {% endbreadcrumb_item %}
+                    {% endbreadcrumb_item_url %}
                 {% endif %}
             {% endblock %}
         </ul>

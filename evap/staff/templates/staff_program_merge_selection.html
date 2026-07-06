@@ -5,10 +5,9 @@
 {% block breadcrumb %}
     {{ block.super }}
 
-    {% url 'staff:program_index' as programm_index_url %}
-    {% breadcrumb_item programm_index_url %} 
+    {% breadcrumb_item_url 'staff:program_index' %} 
         {% translate 'Programs' %}
-    {% endbreadcrumb_item %}
+    {% endbreadcrumb_item_url %}
 
     {% breadcrumb_item %} 
         {% translate 'Merge programs' %}

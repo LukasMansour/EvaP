@@ -5,10 +5,9 @@
 
 {% block breadcrumb %}
     {{ block.super }}
-    {% url 'staff:user_index' as user_index_url %}
-    {% breadcrumb_item user_index_url %} 
+    {% breadcrumb_item_url 'staff:user_index' %} 
         {% translate 'Users' %}
-    {% endbreadcrumb_item %}
+    {% endbreadcrumb_item_url %}
 {% endblock %}
 
 {% block content %}

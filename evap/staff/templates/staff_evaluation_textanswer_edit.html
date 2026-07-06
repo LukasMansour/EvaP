@@ -4,8 +4,7 @@
 {% block breadcrumb %}
     {{ block.super }}
     
-    {% url 'staff:evaluation_textanswers' evaluation.id as staff_evaluation_textanswer_url %}
-    {% breadcrumb_item staff_evaluation_textanswer_url %}
+    {% breadcrumb_item_url 'staff:evaluation_textanswers' evaluation.id %}
         {% translate 'Text answers' %}
     {% endbreadcrumb_item %}
 

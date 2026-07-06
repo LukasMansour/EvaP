@@ -5,10 +5,9 @@
 
 {% block breadcrumb %}
     {{ block.super }}
-    {% url 'staff:semester_preparation_reminder' semester.id as prep_reminder_url %}
-    {% breadcrumb_item prep_reminder_url %} 
+    {% breadcrumb_item_url 'staff:semester_preparation_reminder' semester.id %} 
         {% translate 'Preparation reminder' %}
-    {% endbreadcrumb_item %}
+    {% endbreadcrumb_item_url %}
     {% breadcrumb_item %} 
         {{ responsible }}
     {% endbreadcrumb_item %}

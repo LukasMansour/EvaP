@@ -6,10 +6,9 @@
 {% block breadcrumb %}
     {{ block.super }}
     
-    {% url 'staff:faq_index' as staff_faq_url %}
-    {% breadcrumb_item staff_faq_url %} 
+    {% breadcrumb_item_url 'staff:faq_index' %} 
         {% translate 'FAQ Sections' %}
-    {% endbreadcrumb_item %}
+    {% endbreadcrumb_item_url %}
 
     {% breadcrumb_item %} 
         {{ section.title }}
