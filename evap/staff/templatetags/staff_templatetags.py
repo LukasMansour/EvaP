@@ -1,6 +1,6 @@
 from django.template import Library
-from django.utils.html import format_html
 from django.urls import reverse
+from django.utils.html import format_html
 
 from evap.staff.forms import ExamEvaluationForm
 
@@ -29,6 +29,7 @@ def breadcrumb_item(context, content, url=None):
         url,
         content,
     )
+
 
 @register.simple_block_tag(takes_context=True)
 def breadcrumb_item_url(context, content, url_path, *refs):
