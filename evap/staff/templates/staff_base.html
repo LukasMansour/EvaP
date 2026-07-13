@@ -7,7 +7,7 @@
     <div class="breadcrumb-bar">
         <ul class="breadcrumb">
             {% block breadcrumb %}
-                {% if disable_breadcrumb_manager or not user.is_manager %}
+                {% if not user.is_manager %}
                     {% breadcrumb_item %} 
                         {% translate 'Manage' %}
                     {% endbreadcrumb_item %}

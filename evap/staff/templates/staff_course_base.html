@@ -12,17 +12,10 @@
 
 {% block breadcrumb %}
     {{ block.super }}
-
     {% if course %}
-        {% if disable_breadcrumb_course %}
-            {% breadcrumb_item %} 
-                {{ course.name }}
-            {% endbreadcrumb_item %}
-        {% else %}
-            {% breadcrumb_item_url 'staff:course_edit' course.id %} 
-                {{ course.name }}
-            {% endbreadcrumb_item_url %}
-        {% endif %}
+        {% breadcrumb_item_url 'staff:course_edit' course.id %} 
+            {{ course.name }}
+        {% endbreadcrumb_item_url %}
     {% elif evaluation.course %}
         {% breadcrumb_item_url 'staff:course_edit' evaluation.course.id %} 
             {{ evaluation.course.name }}

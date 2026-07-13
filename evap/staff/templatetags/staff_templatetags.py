@@ -19,8 +19,8 @@ def breadcrumb_item(context, content):
 
 
 @register.simple_block_tag(takes_context=True)
-def breadcrumb_item_url(context, content, url_path, *refs):
-    url = reverse(url_path, args=refs) if url_path is not None else None
+def breadcrumb_item_url(context, content, url_path, *args):
+    url = reverse(url_path, args=args) if url_path is not None else None
 
     request = context["request"]
     current_path = request.path

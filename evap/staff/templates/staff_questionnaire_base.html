@@ -8,16 +8,9 @@
         {% breadcrumb_item_url 'staff:questionnaire_index' %} 
             {% translate 'Questionnaires' %}
         {% endbreadcrumb_item_url %}
-
-        {% if disable_breadcrumb_questionnaire %}
-            {% breadcrumb_item %} 
-                {{ questionnaire.name }}
-            {% endbreadcrumb_item %}
-        {% else %}
-            {% breadcrumb_item_url 'staff:questionnaire_edit' questionnaire.id %} 
-                {{ questionnaire.name }}
-            {% endbreadcrumb_item_url %}
-        {% endif %}
+        {% breadcrumb_item_url 'staff:questionnaire_edit' questionnaire.id %} 
+            {{ questionnaire.name }}
+        {% endbreadcrumb_item_url %}
     {% else %}
         {% breadcrumb_item %} 
             {% translate 'Questionnaires' %}
