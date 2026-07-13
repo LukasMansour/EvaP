@@ -14,7 +14,14 @@ def create_exam_evaluation_form(evaluation):
 
 
 @register.simple_block_tag(takes_context=True)
-def breadcrumb_item(context, content, url=None):
+def breadcrumb_item(context, content):
+    return breadcrumb_item_url(context, content, None)
+
+
+@register.simple_block_tag(takes_context=True)
+def breadcrumb_item_url(context, content, url_path, *refs):
+    url = reverse(url_path, args=refs) if url_path is not None else None
+
     request = context["request"]
     current_path = request.path
 
@@ -29,8 +36,3 @@ def breadcrumb_item(context, content, url=None):
         url,
         content,
     )
-
-
-@register.simple_block_tag(takes_context=True)
-def breadcrumb_item_url(context, content, url_path, *refs):
-    return breadcrumb_item(context, content, reverse(url_path, args=refs))

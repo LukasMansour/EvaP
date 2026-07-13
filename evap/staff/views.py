@@ -254,7 +254,6 @@ def semester_view(request, semester_id) -> HttpResponse:
         "semester": semester,
         "evaluations": evaluations,
         "Evaluation": Evaluation,
-        "disable_breadcrumb_semester": True,
         "rewards_active": rewards_active,
         "num_evaluations": len(evaluations),
         "program_stats": program_stats_with_total,
