@@ -5,11 +5,11 @@
     {{ block.super }}
 
     {% breadcrumb_item_url 'staff:evaluation_textanswers' evaluation.id fragment=textanswer.id|stringformat:"s" %}
-    {% translate 'Text answers' %}
+        {% translate 'Text answers' %}
     {% endbreadcrumb_item_url %}
 
     {% breadcrumb_item %}
-    {{ textanswer.id }}
+        {{ textanswer.id }}
     {% endbreadcrumb_item %}
 {% endblock %}
 

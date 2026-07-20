@@ -13,11 +13,11 @@
     {% if evaluation %}
         {% if evaluation.name %}
             {% breadcrumb_item_url 'staff:evaluation_edit' evaluation.id %}
-            {{ evaluation.name }}
+                {{ evaluation.name }}
             {% endbreadcrumb_item_url %}
         {% else %}
             {% breadcrumb_item_url 'staff:evaluation_edit' evaluation.id %}
-            {{ evaluation.course.name }}
+                {{ evaluation.course.name }}
             {% endbreadcrumb_item_url %}
         {% endif %}
     {% endif %}

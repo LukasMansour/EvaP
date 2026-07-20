@@ -9,11 +9,11 @@
             {% block breadcrumb %}
                 {% if not user.is_manager %}
                     {% breadcrumb_item %}
-                    {% translate 'Manage' %}
+                        {% translate 'Manage' %}
                     {% endbreadcrumb_item %}
                 {% else %}
                     {% breadcrumb_item_url 'staff:index' %}
-                    {% translate 'Manage' %}
+                        {% translate 'Manage' %}
                     {% endbreadcrumb_item_url %}
                 {% endif %}
             {% endblock %}

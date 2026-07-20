@@ -6,10 +6,10 @@
 {% block breadcrumb %}
     {{ block.super }}
     {% breadcrumb_item %}
-    {% translate 'Templates' %}
+        {% translate 'Templates' %}
     {% endbreadcrumb_item %}
     {% breadcrumb_item %}
-    {{ template.name }}
+        {{ template.name }}
     {% endbreadcrumb_item %}
 {% endblock %}
 

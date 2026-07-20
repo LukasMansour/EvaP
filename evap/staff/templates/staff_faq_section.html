@@ -7,11 +7,11 @@
     {{ block.super }}
 
     {% breadcrumb_item_url 'staff:faq_index' %}
-    {% translate 'FAQ Sections' %}
+        {% translate 'FAQ Sections' %}
     {% endbreadcrumb_item_url %}
 
     {% breadcrumb_item %}
-    {{ section.title }}
+        {{ section.title }}
     {% endbreadcrumb_item %}
 {% endblock %}
 

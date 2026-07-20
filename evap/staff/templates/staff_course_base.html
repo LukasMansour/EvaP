@@ -14,11 +14,11 @@
     {{ block.super }}
     {% if course %}
         {% breadcrumb_item_url 'staff:course_edit' course.id %}
-        {{ course.name }}
+            {{ course.name }}
         {% endbreadcrumb_item_url %}
     {% elif evaluation.course %}
         {% breadcrumb_item_url 'staff:course_edit' evaluation.course.id %}
-        {{ evaluation.course.name }}
+            {{ evaluation.course.name }}
         {% endbreadcrumb_item_url %}
     {% endif %}
 {% endblock %}
