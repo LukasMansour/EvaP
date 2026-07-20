@@ -8,15 +8,9 @@
     {% breadcrumb_item_url 'staff:user_index' %}
         {% translate 'Users' %}
     {% endbreadcrumb_item_url %}
-    {% if form.instance.id %}
-        {% breadcrumb_item %}
-            {{ form.instance.full_name }}
-        {% endbreadcrumb_item %}
-    {% else %}
-        {% breadcrumb_item %}
-            {% translate 'Create user' %}
-        {% endbreadcrumb_item %}
-    {% endif %}
+    {% breadcrumb_item %}
+        {% if form.instance.id %}{{ form.instance.full_name }}{% else %}{% translate 'Create user' %}{% endif %}
+    {% endbreadcrumb_item %}
 {% endblock %}
 
 {% block content %}
