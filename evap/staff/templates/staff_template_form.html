@@ -5,11 +5,11 @@
 
 {% block breadcrumb %}
     {{ block.super }}
-    {% breadcrumb_item %} 
-        {% translate 'Templates' %}
+    {% breadcrumb_item %}
+    {% translate 'Templates' %}
     {% endbreadcrumb_item %}
-    {% breadcrumb_item %} 
-        {{ template.name }}
+    {% breadcrumb_item %}
+    {{ template.name }}
     {% endbreadcrumb_item %}
 {% endblock %}
 
@@ -26,7 +26,14 @@
                 <div class="col-3">
                     <p>{% translate 'The following variables are available for this email template:' %}</p>
                     {% for variable in available_variables %}
-                        <button type="button" class="btn btn-sm btn-link text-dark pe-1 copy-variable-to-clipboard-btn" data-variable="{{ variable }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{% translate 'Copy to clipboard' %}">
+                        <button
+                            type="button"
+                            class="btn btn-sm btn-link text-dark pe-1 copy-variable-to-clipboard-btn"
+                            data-variable="{{ variable }}"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="{% translate 'Copy to clipboard' %}"
+                        >
                             <span class="fas fa-clipboard"></span>
                         </button>
                         <code>{{ variable }}</code>
@@ -41,7 +48,6 @@
             </div>
         </div>
     </form>
-
 {% endblock %}
 
 {% block additional_javascript %}

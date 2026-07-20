@@ -8,12 +8,12 @@
         <ul class="breadcrumb">
             {% block breadcrumb %}
                 {% if not user.is_grade_publisher %}
-                    {% breadcrumb_item %} 
-                        {% translate 'Grade publishing' %}
+                    {% breadcrumb_item %}
+                    {% translate 'Grade publishing' %}
                     {% endbreadcrumb_item %}
                 {% else %}
-                    {% breadcrumb_item_url 'grades:index' %} 
-                        {% translate 'Grade publishing' %}
+                    {% breadcrumb_item_url 'grades:index' %}
+                    {% translate 'Grade publishing' %}
                     {% endbreadcrumb_item_url %}
                 {% endif %}
             {% endblock %}

@@ -6,8 +6,8 @@
 {% block breadcrumb %}
     {{ block.super }}
     {% if course %}
-        {% breadcrumb_item_url 'grades:course_view' course.id  %} 
-            {{ course.name }}
+        {% breadcrumb_item_url 'grades:course_view' course.id %}
+        {{ course.name }}
         {% endbreadcrumb_item_url %}
     {% endif %}
 {% endblock %}

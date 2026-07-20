@@ -1839,7 +1839,7 @@ def questionnaire_index(request):
         Questionnaire.objects.all()
         .filter(questionnaires_filter)
         .order_by("order", "pk")
-        .prefetch_related("questions", "contributions__evaluation")
+        .prefetch_related("contributions__evaluation")
     )
 
     template_data = {

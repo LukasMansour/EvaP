@@ -11,8 +11,8 @@
 {% block breadcrumb %}
     {{ block.super }}
     {% if semester %}
-        {% breadcrumb_item_url 'staff:semester_view' semester.id %} 
-            {{ semester.name }}
+        {% breadcrumb_item_url 'staff:semester_view' semester.id %}
+        {{ semester.name }}
         {% endbreadcrumb_item_url %}
     {% endif %}
 {% endblock %}

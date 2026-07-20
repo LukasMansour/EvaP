@@ -9,12 +9,12 @@
     {{ block.super }}
     {% if semester %}
         {% if not user.is_grade_publisher %}
-            {% breadcrumb_item %} 
-                {{ semester.name }}
+            {% breadcrumb_item %}
+            {{ semester.name }}
             {% endbreadcrumb_item %}
         {% else %}
-            {% breadcrumb_item_url 'grades:semester_view' semester.id  %} 
-                {{ semester.name }}
+            {% breadcrumb_item_url 'grades:semester_view' semester.id %}
+            {{ semester.name }}
             {% endbreadcrumb_item_url %}
         {% endif %}
     {% endif %}

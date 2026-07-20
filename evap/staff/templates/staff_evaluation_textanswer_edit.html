@@ -3,13 +3,13 @@
 {% load staff_templatetags %}
 {% block breadcrumb %}
     {{ block.super }}
-    
-    {% breadcrumb_item_url 'staff:evaluation_textanswers' evaluation.id %}
-        {% translate 'Text answers' %}
+
+    {% breadcrumb_item_url 'staff:evaluation_textanswers' evaluation.id fragment=textanswer.id|stringformat:"s" %}
+    {% translate 'Text answers' %}
     {% endbreadcrumb_item_url %}
 
-    {% breadcrumb_item %} 
-        {{ textanswer.id }}
+    {% breadcrumb_item %}
+    {{ textanswer.id }}
     {% endbreadcrumb_item %}
 {% endblock %}
 
@@ -25,7 +25,9 @@
         </div>
         <div class="card card-submit-area text-center mb-3">
             <div class="card-body">
-                <button id="textanswer-edit-submit-button" type="submit" class="btn btn-primary">{% translate 'Save text answer' %}</button>
+                <button id="textanswer-edit-submit-button" type="submit" class="btn btn-primary">
+                    {% translate 'Save text answer' %}
+                </button>
             </div>
         </div>
     </form>

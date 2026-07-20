@@ -8,12 +8,12 @@
         <ul class="breadcrumb">
             {% block breadcrumb %}
                 {% if not user.is_manager %}
-                    {% breadcrumb_item %} 
-                        {% translate 'Manage' %}
+                    {% breadcrumb_item %}
+                    {% translate 'Manage' %}
                     {% endbreadcrumb_item %}
                 {% else %}
-                    {% breadcrumb_item_url 'staff:index' %} 
-                        {% translate 'Manage' %}
+                    {% breadcrumb_item_url 'staff:index' %}
+                    {% translate 'Manage' %}
                     {% endbreadcrumb_item_url %}
                 {% endif %}
             {% endblock %}
